@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Twitch Channel Points Bonus Collector",
+  "short_name": "Twitch CP",
+  "description": "Auto-clicks the Channel Points bonus button when it appears.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "images/thin_icon-16.png",
+    "19": "images/thin_icon-19.png",
+    "24": "images/thin_icon-24.png",
+    "32": "images/thin_icon-32.png",
+    "38": "images/thin_icon-38.png",
+    "48": "images/thin_icon-48.png",
+    "64": "images/thin_icon-64.png",
+    "96": "images/thin_icon-96.png",
+    "128": "images/thin_icon-128.png"
+  },
+  "author": "avi12",
+  "developer": {
+    "name": "avi12",
+    "url": "https://avi12.com/"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["scripts/content-script-twitch.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "twitch-cp-bonus-collector@avi12.com"
+    }
+  },
+  "applications": {
+    "gecko": {
+      "id": "twitch-cp-bonus-collector@avi12.com"
+    }
+  }
+}

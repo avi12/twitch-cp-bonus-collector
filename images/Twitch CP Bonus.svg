@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" fill="none">
+    <path fill="#E5E5E5" d="M0 0h640v400H0z"/>
+    <path fill="#00E6CB" d="M0 0h640v400H0z"/>
+    <path fill="#000" fill-rule="evenodd" d="M399.662 117.398L418 163.25V298H222V163.25l18.338-45.852A24.506 24.506 0 01263.087 102h113.826a24.501 24.501 0 0122.749 15.398zM263.087 126.5h113.826l14.7 36.75H248.386l14.701-36.75zM246.5 187.75v85.75h147v-85.75h-36.75v49h-73.5v-49H246.5zm85.75 0v24.5h-24.5v-24.5h24.5z" clip-rule="evenodd"/>
+</svg>
