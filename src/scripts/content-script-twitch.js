@@ -1,15 +1,13 @@
-collectBits();
-
-function collectBits() {
-  const btnBits = document.querySelector(".tw-interactive.tw-button--success");
-  if (btnBits) {
+function collectBonus() {
+  const btnBonus = document.querySelector(".tw-interactive.tw-button--success");
+  if (btnBonus) {
     const { activeElement } = document;
-    btnBits.click();
+    btnBonus.click();
     activeElement.focus();
   }
 }
 
-new MutationObserver(collectBits).observe(document.body, {
+new MutationObserver(collectBonus).observe(document.body, {
   childList: true,
   subtree: true,
 });
