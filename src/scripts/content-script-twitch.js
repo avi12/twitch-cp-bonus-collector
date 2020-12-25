@@ -1,5 +1,5 @@
 function collectBonus() {
-  const btnBonus = document.querySelector(".tw-interactive.tw-button--success");
+  const btnBonus = document.querySelector(".tw-button--success");
   if (btnBonus) {
     const { activeElement } = document;
     btnBonus.click();
