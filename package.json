@@ -29,7 +29,6 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "pack": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir dist",
     "pack-self": "zip-self -o dist_packed/twitch_cp_collector-{version}-source.zip",
     "build-pack": "pnpm run build && pnpm run pack && pnpm run pack-self",
     "run-browser": "web-ext run --no-config-discovery --start-url https://www.twitch.tv/codinggarden --source-dir dist --verbose --target",
