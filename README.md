@@ -9,17 +9,17 @@ If you want to fork, just make sure to credit me and link this repository and [m
 
 ## Install dependencies
 ```
-yarn
+pnpm i
 ```
 ## Build
 ```
-yarn run build-minify
+pnpm run build-minify
 ```
 ## Pack
 ```
-yarn run pack && yarn run pack-self
+pnpm run pack && pnpm run pack-self
 ```
 ## Shorthand for build & pack
 ```
-yarn run build-pack
+pnpm run build-pack
 ```
