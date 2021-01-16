@@ -7,7 +7,9 @@ function collectBonus() {
   }
 }
 
-new MutationObserver(collectBonus).observe(document.body, {
-  childList: true,
-  subtree: true,
-});
+if (document.querySelector("video")) {
+  new MutationObserver(collectBonus).observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+}
