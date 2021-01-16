@@ -30,7 +30,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "pack-self": "zip-self -o dist_packed/twitch_cp_collector-{version}-source.zip",
-    "build-pack": "pnpm run build && pnpm run pack && pnpm run pack-self",
+    "build-pack": "pnpm run build && pnpm run pack-self",
     "run-browser": "web-ext run --no-config-discovery --start-url https://www.twitch.tv/codinggarden --source-dir dist --verbose --target",
     "run-firefox": "pnpm run-browser firefox-desktop",
     "run-chromium": "pnpm run-browser chromium",
