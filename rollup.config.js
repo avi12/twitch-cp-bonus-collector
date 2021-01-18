@@ -15,7 +15,7 @@ export default {
   },
   plugins: [
     chromeExtension(),
-    isProduction && simpleReloader(),
+    !isProduction && simpleReloader(),
     emptyDir(),
     isProduction && terser(),
     isProduction && zip({ dir: "dist_packed" })
