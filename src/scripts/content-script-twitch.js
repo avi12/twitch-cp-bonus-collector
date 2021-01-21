@@ -1,15 +1,16 @@
 function collectBonus() {
   const btnBonus = document.querySelector(".tw-button--success");
-  if (btnBonus) {
-    const { activeElement } = document;
-    btnBonus.click();
-    activeElement.focus();
+  const isLiveStreamPage = Boolean(document.querySelector("video"));
+
+  if (!btnBonus || !isLiveStreamPage) {
+    return;
   }
+  const { activeElement } = document;
+  btnBonus.click();
+  activeElement.focus();
 }
 
-if (document.querySelector("video")) {
-  new MutationObserver(collectBonus).observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
-}
+new MutationObserver(collectBonus).observe(document.body, {
+  childList: true,
+  subtree: true
+});
