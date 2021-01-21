@@ -1,7 +1,7 @@
 {
   "name": "twitch-cp-bonus-collector",
   "description": "A browser extension that automates clicking on the Channel Points bonus button during a Twitch live stream when it appears.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "devDependencies": {
     "prettier": "^2.2.1",
     "rollup": "^2.35.1",
@@ -31,9 +31,10 @@
     "build": "rollup -c",
     "pack-self": "zip-self -o dist_packed/twitch_cp_collector-{version}-source.zip",
     "build-pack": "pnpm run build && pnpm run pack-self",
+    "set-version": "set-json-version -f package.json dist/manifest.json src/manifest.json -v",
     "run-browser": "web-ext run --no-config-discovery --start-url https://www.twitch.tv/codinggarden --source-dir dist --verbose --target",
     "run-firefox": "pnpm run-browser firefox-desktop",
     "run-chromium": "pnpm run-browser chromium",
-    "set-version": "set-json-version -f package.json dist/manifest.json src/manifest.json -v"
+    "run-edge-windows": "\"\"%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe\"\" https://www.twitch.tv/codinggarden --load-extension=%cd%\\dist"
   }
 }
