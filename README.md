@@ -1,6 +1,11 @@
 # Twitch Channel Points Bonus Collector
-A browser extension to make Twitch users' life easier to get some good Channel Points.  
-Available for [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg), [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/twitch-cp-bonus-collector), [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/igneodbpmkniacbglbpphcbnimpelkec), and [Opera](https://addons.opera.com/en/extensions/details/twitch-channel-points-bonus-collector).  
+A browser extension to make Twitch users' life easier to get some good ![Channel Points](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/images/icons/Normal%20icon-16.png?raw=true)  
+Available for:
+* [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kbbdnbaghpcjpdhbjbccadodjejlkkgg?color=white&label=users&style=flat-square)
+* [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/twitch-cp-bonus-collector) ![Mozilla Add-on](https://img.shields.io/amo/users/twitch-cp-bonus-collector?color=white&label=users&style=flat-square)
+* [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/igneodbpmkniacbglbpphcbnimpelkec)
+* [Opera](https://addons.opera.com/en/extensions/details/twitch-channel-points-bonus-collector)
+
 Made by [avi12](https://avi12.com).
 
 ## Requirements for setting up
