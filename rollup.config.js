@@ -1,23 +1,21 @@
-import {
-  chromeExtension,
-  simpleReloader
-} from "rollup-plugin-chrome-extension";
 import { terser } from "rollup-plugin-terser";
-import zip from "rollup-plugin-zip";
-import { emptyDir } from "rollup-plugin-empty-dir";
 
 const isProduction = !process.env.ROLLUP_WATCH;
-export default {
-  input: "src/manifest.json",
-  output: {
-    dir: "dist",
-    format: "esm"
-  },
-  plugins: [
-    chromeExtension(),
-    !isProduction && simpleReloader(),
-    emptyDir(),
-    isProduction && terser(),
-    isProduction && zip({ dir: "dist_packed" })
-  ]
-};
+
+function createConfig(filename) {
+  return {
+    input: `src/${filename}.js`,
+    output: {
+      format: "esm",
+      file: `dist/build/${filename}.js`
+    },
+    plugins: [isProduction && terser()],
+    watch: {
+      clearScreen: false
+    }
+  };
+}
+
+export default [
+  createConfig("content-script-twitch"),
+];
