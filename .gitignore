@@ -19,9 +19,7 @@ node_modules
 .tmp
 
 # Distribution
-/dist_packed-edge
 /dist_packed
-/dist-edge
-/dist
+/dist/build
 images/Promotional image Chrome-Edge.png
 images/Promotional image Opera.png
