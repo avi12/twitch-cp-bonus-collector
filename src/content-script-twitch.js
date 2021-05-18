@@ -1,5 +1,5 @@
 function collectBonus() {
-  const btnBonus = document.querySelector(".tw-button--success");
+  const btnBonus = elContainer.querySelector(".tw-button--success, [class*=ScCoreButtonSuccess]");
   const isLiveStreamPage = Boolean(document.querySelector("video"));
 
   if (!btnBonus || !isLiveStreamPage) {
@@ -10,7 +10,8 @@ function collectBonus() {
   activeElement.focus();
 }
 
-new MutationObserver(collectBonus).observe(document.body, {
+const elContainer = document.querySelector(".chat-input__buttons-container");
+new MutationObserver(collectBonus).observe(elContainer, {
   childList: true,
   subtree: true
 });
