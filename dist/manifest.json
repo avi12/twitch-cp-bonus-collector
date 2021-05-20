@@ -3,7 +3,7 @@
   "name": "Twitch Channel Points Bonus Collector",
   "short_name": "Twitch CP",
   "description": "Auto-clicks the Channel Points bonus button when it appears.",
-  "version": "1.1.4.1",
+  "version": "1.1.4.2",
   "icons": {
     "16": "images/thin_icon-16.png",
     "19": "images/thin_icon-19.png",
