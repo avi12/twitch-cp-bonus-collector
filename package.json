@@ -1,38 +1,39 @@
 {
   "name": "twitch-cp-bonus-collector",
+  "version": "1.2.0",
   "description": "A browser extension that automates clicking on the Channel Points bonus button during a Twitch live stream when it appears.",
-  "version": "1.1.5",
-  "devDependencies": {
-    "prettier": "^2.3.0",
-    "rollup": "^2.48.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "set-json-version": "^1.0.6",
-    "web-ext": "^6.1.0",
-    "zip-self": "^0.3.2"
-  },
+  "repository": "https://github.com/avi12/twitch-cp-bonus-collector",
+  "license": "GPL-3.0-or-later",
+  "author": "avi12 <avi6106@gmail.com>",
   "homepage": "https://avi12.com",
-  "author": {
-    "name": "avi12",
-    "email": "avi6106@gmail.com"
-  },
   "bugs": {
     "email": "avi6106@gmail.com"
-  },
-  "repository": "avi12/twitch-cp-bonus-collector",
-  "license": "MIT",
-  "prettier": {
-    "trailingComma": "none"
   },
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "pack": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir dist --filename twitch-cp-bonus-collector-{version}.zip",
     "pack-self": "zip-self -o dist_packed/twitch-cp-bonus-collector-{version}-source.zip",
-    "build-pack": "pnpm run build && pnpm run pack && pnpm run pack-self",
+    "build-pack": "pnpm run build && pnpm run pack && pnpm run webext-incompat-fix && pnpm run pack-self",
+    "build-for-firefox": "build-for-browser --i dist_packed/youtube-like-dislike-shortcut-{version}.zip --browser=firefox",
+    "build-for-opera": "build-for-browser --i dist_packed/youtube-like-dislike-shortcut-{version}.zip --browser=opera",
+    "webext-incompat-fix": "webext-store-incompat-fixer -i dist_packed/twitch-cp-bonus-collector-{version}.zip -s edge,firefox,chrome,opera",
     "set-version": "set-json-version -f package.json dist/manifest.json dist/manifest.json -v",
     "run-browser": "web-ext run --no-config-discovery --start-url https://www.twitch.tv/codinggarden --source-dir dist --verbose --target",
     "run-firefox": "pnpm run-browser firefox-desktop",
     "run-chromium": "pnpm run-browser chromium",
     "run-edge-windows": "\"\"%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe\"\" https://www.twitch.tv/codinggarden --load-extension=%cd%\\dist"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.169",
+    "build-for-browser": "github:avi12/build-for-browser",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "rollup": "^2.61.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "set-json-version": "^1.0.7",
+    "web-ext": "^6.6.0",
+    "webext-store-incompat-fixer": "^0.1.37",
+    "zip-self": "^0.4.4"
   }
 }
