@@ -1,61 +1,70 @@
 # Twitch Channel Points Bonus Collector
+
 A browser extension to make Twitch users' life easier to get some good ![Channel Points](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/images/icons/Normal%20icon-16.png?raw=true)  
 Available for:
-* [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kbbdnbaghpcjpdhbjbccadodjejlkkgg?color=white&label=users&style=flat-square)
-* [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/twitch-cp-bonus-collector) ![Mozilla Add-on](https://img.shields.io/amo/users/twitch-cp-bonus-collector?color=white&label=users&style=flat-square)
-* [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/igneodbpmkniacbglbpphcbnimpelkec) ![users count](https://img.shields.io/badge/dynamic/json?label=users&query=activeInstallCount&style=flat-square&color=white&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/igneodbpmkniacbglbpphcbnimpelkec)
-* [Opera](https://addons.opera.com/en/extensions/details/twitch-channel-points-bonus-collector)
+
+- [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kbbdnbaghpcjpdhbjbccadodjejlkkgg?color=white&label=users&style=flat-square)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/twitch-cp-bonus-collector) ![Mozilla Add-on](https://img.shields.io/amo/users/twitch-cp-bonus-collector?color=white&label=users&style=flat-square)
+- [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/igneodbpmkniacbglbpphcbnimpelkec) ![users count](https://img.shields.io/badge/dynamic/json?label=users&query=activeInstallCount&style=flat-square&color=white&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/igneodbpmkniacbglbpphcbnimpelkec)
+- [Opera](https://addons.opera.com/en/extensions/details/twitch-channel-points-bonus-collector)
 
 Made by [avi12](https://avi12.com).
 
 ## Requirements for setting up
+
 Install [Node.js](https://nodejs.org) and [PNPM](https://pnpm.js.org/en/installation).
 
 ## Install dependencies
-```shell
+
+```shell script
 pnpm i
 ```
 
 ## Start Rollup for development
-```shell
+
+```shell script
 pnpm dev
 ```
 
 ## Running
-### Chrome/Chromium
-```shell
+
+### Chromium/Chrome
+
+```shell script
 pnpm run-chromium
 ```
 
-### Firefox
+### Edge on Windows 10/11
+
 ```shell
-pnpm run-firefox
+pnpm run-edge-windows
 ```
 
-### Other browsers
-1. Open the extensions page in your browser.
-1. Enable the developer mode (top-right corner usually).
-1. Either drag-drop the `dist` folder onto the browser or click "Load unpacked extension" and choose it.
+### Browsers that don't support Manifest v3
 
-## Build
-```shell
-pnpm build
-```
+1. Build the extension for Firefox/Opera (see below).
+2. Open the extensions page in your browser.
+3. Enable the developer mode (top-right corner usually).
+4. Either drag-drop the browser-compatible ZIP onto the browser or click "Load unpacked extension" and choose it.
 
-## Pack
-```shell
-pnpm run pack
-```
+## Build & pack
 
-## Pack source code
-```shell
-pnpm pack-self
-```
-
-## Shorthand
 ```shell
 pnpm build-pack
 ```
+
+### Build for Firefox (run `pnpm build-pack` first)
+
+```shell
+pnpm build-for-firefox
+```
+
+### Build for Opera (run `pnpm build-pack` first)
+
+```shell
+pnpm build-for-opera
+```
+
 ## Do you want to contribute?
-Feel free to!  
-If you want to fork, just make sure to credit me and link this repository and [my website](https://avi12.com).
+
+Feel free to! Make sure to comply with the license, [GPL v3](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/LICENSE).
