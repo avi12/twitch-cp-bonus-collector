@@ -1,5 +1,7 @@
 function collectBonus() {
-  const btnBonus = document.querySelector("[class*=claimable-bonus], .tw-button--success, [class*=ScCoreButtonSuccess]");
+  const btnBonus = document.querySelector(
+    "[class*=claimable-bonus], .tw-button--success, [class*=ScCoreButtonSuccess]"
+  );
   const isLiveStreamPage = Boolean(document.querySelector("video"));
 
   if (!btnBonus || !isLiveStreamPage) {
