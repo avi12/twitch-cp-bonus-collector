@@ -6,16 +6,16 @@ function createConfig(filename) {
   return {
     input: `src/${filename}.js`,
     output: {
-      format: "esm",
+      format: "cjs",
       file: `dist/build/${filename}.js`
     },
     plugins: [isProduction && terser()],
     watch: {
-      clearScreen: false
+      clearScreen: true
     }
   };
 }
 
 export default [
-  createConfig("content-script-twitch"),
+  createConfig("scripts/content-script-twitch")
 ];
