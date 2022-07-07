@@ -59,12 +59,6 @@ pnpm build-pack
 pnpm build-for-firefox
 ```
 
-### Build for Opera (run `pnpm build-pack` first)
-
-```shell
-pnpm build-for-opera
-```
-
 ## Do you want to contribute?
 
 Feel free to! Make sure to comply with the license, [GPL v3](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/LICENSE).
