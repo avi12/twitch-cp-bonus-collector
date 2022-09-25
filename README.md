@@ -1,6 +1,6 @@
 # Twitch Channel Points Bonus Collector
 
-A browser extension to make Twitch users' life easier to get some good ![Channel Points](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/images/icons/Normal%20icon-16.png?raw=true)  
+A browser extension to make Twitch users' life easier to get some good ![Channel Points](https://user-images.githubusercontent.com/6422804/192149173-027f0941-cf4a-4fe3-b2cb-cbb3beb57a3c.png)  
 Available for:
 
 - [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kbbdnbaghpcjpdhbjbccadodjejlkkgg?color=white&label=users&style=flat-square)
