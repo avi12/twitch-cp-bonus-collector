@@ -1,6 +1,7 @@
 # Twitch Channel Points Bonus Collector
 
-A browser extension to make Twitch users' life easier to get some good ![Channel Points](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/images/icons/Normal%20icon-16.png?raw=true)  
+A browser extension to make Twitch users' life easier to get some
+good ![Channel Points](https://user-images.githubusercontent.com/6422804/192149173-027f0941-cf4a-4fe3-b2cb-cbb3beb57a3c.png)  
 Available for:
 
 - [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kbbdnbaghpcjpdhbjbccadodjejlkkgg?color=white&label=users&style=flat-square)
@@ -20,32 +21,29 @@ Install [Node.js](https://nodejs.org) and [PNPM](https://pnpm.js.org/en/installa
 pnpm i
 ```
 
-## Start Rollup for development
+## Start development server
 
-```shell script
+```shell
 pnpm dev
+```
+
+Or
+
+```shell
+pnpm dev:firefox
 ```
 
 ## Running
 
-### Chromium/Chrome
-
-```shell script
-pnpm run-chromium
+```shell
+pnpm run:chrome
 ```
 
-### Edge on Windows 10/11
+Or
 
 ```shell
-pnpm run-edge-windows
+pnpm run:firefox
 ```
-
-### Browsers that don't support Manifest v3
-
-1. Build the extension for Firefox/Opera (see below).
-2. Open the extensions page in your browser.
-3. Enable the developer mode (top-right corner usually).
-4. Either drag-drop the browser-compatible ZIP onto the browser or click "Load unpacked extension" and choose it.
 
 ## Build & pack
 
@@ -53,12 +51,13 @@ pnpm run-edge-windows
 pnpm build-pack
 ```
 
-### Build for Firefox (run `pnpm build-pack` first)
+### Build & pack for Firefox
 
 ```shell
-pnpm build-for-firefox
+pnpm build-pack:firefox
 ```
 
 ## Do you want to contribute?
 
-Feel free to! Make sure to comply with the license, [GPL v3](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/LICENSE).
+Feel free to! Make sure to comply with the
+license, [GPL v3](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/LICENSE).

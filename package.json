@@ -1,39 +1,42 @@
 {
   "name": "twitch-cp-bonus-collector",
-  "version": "1.2.1",
-  "description": "A browser extension that automates clicking on the Channel Points bonus button during a Twitch live stream when it appears.",
-  "repository": "https://github.com/avi12/twitch-cp-bonus-collector",
-  "license": "GPL-3.0-or-later",
-  "author": "avi12 <avi6106@gmail.com>",
-  "homepage": "https://avi12.com",
-  "bugs": {
-    "email": "avi6106@gmail.com"
-  },
+  "displayName": "Twitch Channel Points Bonus Collector",
+  "version": "2.0.0",
+  "description": "Auto-clicks the Channel Points bonus button when it appears.",
+  "author": "avi12",
+  "homepage": "https://avi12.com/twitch-cp-bonus-collector",
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c",
-    "pack": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir dist --filename twitch-cp-bonus-collector-{version}.zip",
-    "pack-self": "zip-self -o dist_packed/twitch-cp-bonus-collector-{version}-source.zip",
-    "build-pack": "pnpm run build && pnpm run pack && pnpm run webext-incompat-fix && pnpm run pack-self",
-    "build-for-firefox": "build-for-browser --i dist_packed/twitch-cp-bonus-collector-{version}.zip --browser=firefox",
-    "webext-incompat-fix": "webext-store-incompat-fixer -i dist_packed/twitch-cp-bonus-collector-{version}.zip -s edge,firefox,chrome,opera",
-    "set-version": "set-json-version -f package.json dist/manifest.json dist/manifest.json -v",
-    "run-browser": "web-ext run --no-config-discovery --start-url https://www.twitch.tv/codinggarden --source-dir dist --verbose --target",
-    "run-firefox": "pnpm run-browser firefox-desktop",
-    "run-chromium": "pnpm run-browser chromium",
-    "run-edge-windows": "\"\"%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe\"\" https://www.twitch.tv/codinggarden --load-extension=%cd%\\dist"
+    "dev": "plasmo dev",
+    "dev:firefox": "plasmo dev --target=firefox-mv2",
+    "build": "plasmo build",
+    "build:firefox": "plasmo build --target=firefox-mv2",
+    "pack": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir build/chrome-mv3-prod --filename skillshare-player-control-{version}.zip",
+    "pack:firefox": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir build/firefox-mv2-prod --filename skillshare-player-control-{version}_adapted_for_firefox.zip",
+    "pack:self": "zip-self -o dist_packed/skillshare-player-control-{version}_adapted_for_firefox-source.zip",
+    "build-pack": "pnpm build && pnpm build && pnpm run pack",
+    "build-pack:firefox": "pnpm build:firefox && pnpm pack:firefox && pnpm pack:self",
+    "build-pack:all": "pnpm build && pnpm build:firefox && pnpm run pack && pnpm pack:firefox && pnpm pack:self",
+    "set-version": "set-json-version -f package.json -v",
+    "run-browser": "web-ext run --no-config-discovery --start-url https://www.skillshare.com/classes/Practical-C-Programming-Beginner-Course/919943529 --verbose --target",
+    "run:chrome": "pnpm run-browser chromium --source-dir build/chrome-mv3-dev",
+    "run:firefox": "pnpm run-browser firefox-desktop --source-dir build/firefox-mv2-dev"
+  },
+  "dependencies": {
+    "plasmo": "0.55.0-alpha.2"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.175",
-    "build-for-browser": "github:avi12/build-for-browser",
-    "eslint": "^8.6.0",
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.6.2",
-    "rollup": "^2.63.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "set-json-version": "^1.0.7",
-    "web-ext": "^6.6.0",
-    "webext-store-incompat-fixer": "^0.3.1",
-    "zip-self": "^0.4.5"
+    "@plasmohq/prettier-plugin-sort-imports": "3.5.1",
+    "@types/chrome": "0.0.197",
+    "@types/node": "18.7.21",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "prettier": "2.7.1",
+    "set-json-version": "^2.1.0",
+    "typescript": "4.8.3",
+    "web-ext": "^7.2.0",
+    "zip-self": "^0.5.2"
+  },
+  "manifest": {
+    "offline_enabled": true
   }
 }
