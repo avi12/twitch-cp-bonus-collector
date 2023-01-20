@@ -1,7 +1,7 @@
 {
   "name": "twitch-cp-bonus-collector",
   "displayName": "Twitch Channel Points Bonus Collector",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Auto-clicks the Channel Points bonus button when it appears.",
   "author": "avi12",
   "homepage": "https://avi12.com/twitch-cp-bonus-collector",
