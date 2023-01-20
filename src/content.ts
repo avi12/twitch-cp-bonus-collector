@@ -1,9 +1,7 @@
 import type { PlasmoContentScript } from "plasmo";
 
 function collectBonusIfPossible(): void {
-  const btnBonus = document.querySelector<HTMLButtonElement>(
-    "[class*=claimable-bonus], .tw-button--success, [class*=ScCoreButtonSuccess]"
-  );
+  const btnBonus = document.querySelector<HTMLButtonElement>("[class*=ScCoreButtonSuccess]");
   const isLiveStreamPage = Boolean(document.querySelector("video"));
   if (!btnBonus || !isLiveStreamPage) {
     return;
