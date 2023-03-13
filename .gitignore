@@ -29,11 +29,14 @@ yarn-error.log*
 
 
 # local env files
-*.env
+chrome.env
+firefox.env
+opera.env
+edge.env
 
-out
+# output
 build
-dist_packed
+dist-pack
 
 # plasmo - https://www.plasmo.com
 .plasmo
