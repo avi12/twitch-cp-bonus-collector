@@ -22,19 +22,20 @@
     "run:firefox": "pnpm run-browser firefox-desktop --source-dir build/firefox-mv2-dev"
   },
   "dependencies": {
-    "plasmo": "0.55.0-alpha.2"
+    "plasmo": "0.65.1"
   },
   "devDependencies": {
-    "@plasmohq/prettier-plugin-sort-imports": "3.5.1",
-    "@types/chrome": "0.0.197",
-    "@types/node": "18.7.21",
-    "@typescript-eslint/eslint-plugin": "^5.38.0",
-    "@typescript-eslint/parser": "^5.38.0",
-    "prettier": "2.7.1",
-    "set-json-version": "^2.1.0",
-    "typescript": "4.8.3",
-    "web-ext": "^7.2.0",
-    "zip-self": "^0.5.2"
+    "@plasmohq/prettier-plugin-sort-imports": "3.6.3",
+    "@types/chrome": "0.0.210",
+    "@types/node": "18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-avi12": "github:avi12/eslint-config-avi12",
+    "prettier": "2.8.3",
+    "typescript": "4.9.4",
+    "web-ext": "^7.5.0",
+    "zip-self": "^0.5.6"
   },
   "manifest": {
     "offline_enabled": true
