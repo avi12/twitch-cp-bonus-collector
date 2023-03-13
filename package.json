@@ -7,19 +7,20 @@
   "homepage": "https://avi12.com/twitch-cp-bonus-collector",
   "scripts": {
     "dev": "plasmo dev",
-    "dev:firefox": "plasmo dev --target=firefox-mv2",
+    "dev:firefox": "plasmo dev --verbose --target=firefox-mv3",
     "build": "plasmo build",
-    "build:firefox": "plasmo build --target=firefox-mv2",
-    "pack": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir build/chrome-mv3-prod --filename twitch-cp-bonus-collector-{version}.zip",
-    "pack:firefox": "web-ext build --overwrite-dest --artifacts-dir dist_packed --source-dir build/firefox-mv2-prod --filename twitch-cp-bonus-collector-{version}_adapted_for_firefox.zip",
-    "pack:self": "zip-self -o dist_packed/twitch-cp-bonus-collector-{version}_adapted_for_firefox-source.zip",
-    "build-pack": "pnpm build && pnpm build && pnpm run pack",
-    "build-pack:firefox": "pnpm build:firefox && pnpm pack:firefox && pnpm pack:self",
-    "build-pack:all": "pnpm build && pnpm build:firefox && pnpm run pack && pnpm pack:firefox && pnpm pack:self",
-    "set-version": "set-json-version -f package.json -v",
-    "run-browser": "web-ext run --no-config-discovery --start-url https://www.skillshare.com/classes/Practical-C-Programming-Beginner-Course/919943529 --verbose --target",
-    "run:chrome": "pnpm run-browser chromium --source-dir build/chrome-mv3-dev",
-    "run:firefox": "pnpm run-browser firefox-desktop --source-dir build/firefox-mv2-dev"
+    "build:firefox": "plasmo build --target=firefox-mv3",
+    "package": "web-ext build --source-dir build/chrome-mv3-prod --overwrite-dest --artifacts-dir dist-pack --filename twitch-cp-bonus-collector-{version}.zip",
+    "package:firefox": "web-ext build --source-dir build/firefox-mv3-prod --overwrite-dest --artifacts-dir dist-pack --filename twitch-cp-bonus-collector-{version}_adapted_for_firefox.zip",
+    "package:self": "zip-self -o dist-pack/twitch-cp-bonus-collector-{version}_adapted_for_firefox-source.zip",
+    "build-pack": "pnpm build && pnpm package",
+    "build-pack:firefox": "pnpm build:firefox && pnpm package:firefox && pnpm package:self",
+    "build-pack:all": "pnpm build-pack && pnpm build-pack:firefox",
+    "run-browser": "web-ext run --no-config-discovery --start-url https://www.twitch.tv/codinggarden --verbose --target",
+    "run-firefox": "pnpm run-browser firefox-desktop --source-dir build/firefox-mv3-dev",
+    "run-chromium": "pnpm run-browser chromium --source-dir build/chrome-mv3-dev",
+    "run-edge:windows": "pnpm run-chromium --chromium-binary \"%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe\"",
+    "run-opera:windows": "pnpm run-chromium --chromium-binary \"%LocalAppData%\\Programs\\Opera\\opera.exe\""
   },
   "dependencies": {
     "plasmo": "0.65.1"
