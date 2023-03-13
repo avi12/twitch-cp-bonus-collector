@@ -1,4 +1,4 @@
-import type { PlasmoContentScript } from "plasmo";
+import type { PlasmoCSConfig } from "plasmo";
 
 function collectBonusIfPossible(): void {
   const btnBonus = document.querySelector<HTMLButtonElement>("[class*=ScCoreButtonSuccess]");
@@ -7,16 +7,13 @@ function collectBonusIfPossible(): void {
     return;
   }
 
-  const activeElement = document.activeElement as HTMLElement;
+  const { activeElement } = document;
   btnBonus.click();
-  activeElement.focus();
+  (activeElement as HTMLElement).focus();
 }
 
-new MutationObserver(collectBonusIfPossible).observe(document.body, {
-  childList: true,
-  subtree: true
-});
+new MutationObserver(collectBonusIfPossible).observe(document.body, { childList: true, subtree: true });
 
-export const config: PlasmoContentScript = {
+export const config: PlasmoCSConfig = {
   matches: ["https://www.twitch.tv/*"]
 };
