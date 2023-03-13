@@ -38,6 +38,11 @@
     "zip-self": "^0.5.6"
   },
   "manifest": {
-    "offline_enabled": true
+    "offline_enabled": true,
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "$PLASMO_PUBLIC_FIREFOX_EXT_ID"
+      }
+    }
   }
 }
