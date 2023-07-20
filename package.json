@@ -23,20 +23,20 @@
     "run-opera:windows": "pnpm run-chromium --chromium-binary \"%LocalAppData%\\Programs\\Opera\\opera.exe\""
   },
   "dependencies": {
-    "plasmo": "0.67.4"
+    "plasmo": "0.81.0"
   },
   "devDependencies": {
-    "@plasmohq/prettier-plugin-sort-imports": "3.6.3",
-    "@types/chrome": "0.0.224",
-    "@types/node": "18.15.3",
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
-    "eslint": "^8.36.0",
+    "@plasmohq/prettier-plugin-sort-imports": "4.0.1",
+    "@types/chrome": "0.0.241",
+    "@types/node": "20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
     "eslint-config-avi12": "github:avi12/eslint-config-avi12",
-    "prettier": "2.8.4",
-    "typescript": "5.0.2",
-    "web-ext": "^7.5.0",
-    "zip-self": "^0.5.6"
+    "prettier": "3.0.0",
+    "typescript": "5.1.6",
+    "web-ext": "^7.6.2",
+    "zip-self": "^0.5.9"
   },
   "manifest": {
     "offline_enabled": true,
