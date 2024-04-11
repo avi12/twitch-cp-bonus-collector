@@ -1,0 +1,33 @@
+.twitch-bonus-collector-donation {
+  color: var(--color-text-button-primary, #efeff1);
+  background-color: #006fdf;
+  padding: 0.5rem var(--button-padding-x) 0.5rem calc(var(--button-padding-x) - 0.2rem);
+  border-radius: var(--border-radius-medium, 0.4rem);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-size: var(--button-text-default);
+  font-weight: var(--font-weight-semibold);
+
+  &:hover {
+    background-color: #005dbc;
+  }
+
+  img {
+    --size: 16px;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  button {
+    border: none;
+    padding: 0;
+    background: none;
+    color: var(--color-text-button-primary, #efeff1);
+    cursor: pointer;
+    font-size: var(--button-text-default);
+    font-weight: var(--font-weight-semibold);
+  }
+}
