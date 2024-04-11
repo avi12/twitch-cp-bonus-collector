@@ -13,7 +13,7 @@
     "build:firefox": "pnpm build --target=firefox-mv3",
     "package": "web-ext build --verbose --overwrite-dest --source-dir build/chrome-mv3-prod --filename twitch-cp-bonus-collector-{version}.zip",
     "package:firefox": "web-ext build --verbose --overwrite-dest --source-dir build/firefox-mv3-prod --filename twitch-cp-bonus-collector-{version}-firefox.zip",
-    "package:self": "zip-self -o dist-pack/twitch-cp-bonus-collector-{version}-firefox-source.zip",
+    "package:self": "zip-self -o web-ext-artifacts/twitch-cp-bonus-collector-{version}-firefox-source.zip",
     "build-pack": "pnpm build && pnpm package",
     "build-pack:firefox": "pnpm build:firefox && pnpm package:firefox && pnpm package:self",
     "build-pack:all": "pnpm build-pack && pnpm build-pack:firefox",
