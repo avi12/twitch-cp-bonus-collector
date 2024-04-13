@@ -9,6 +9,7 @@ export default [
   eslint.configs.recommended,
   ...tsEslint.configs.recommended,
   ...svelteEslint.configs["flat/recommended"],
+  ...avi12,
   {
     files: ["**/*.svelte"],
     languageOptions: {
@@ -28,6 +29,5 @@ export default [
     languageOptions: {
       parser: tsEslint.parser
     }
-  },
-  ...avi12
+  }
 ];
