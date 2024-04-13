@@ -63,7 +63,7 @@
 
 {#if !isHideDonationSection}
   <a class="twitch-bonus-collector-donation" href="https://paypal.me/avi12" target="_blank" on:click={hideDonationSection}>
-    <img src={pathPaypal} alt="PayPal" />Support Twitch Bonus Collector Extension<button
+    <img alt="PayPal" src={pathPaypal} />Support Twitch Bonus Collector Extension<button
       on:click={e => {
         e.preventDefault();
         hideDonationSection();
