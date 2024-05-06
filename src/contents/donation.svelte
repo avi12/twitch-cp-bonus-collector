@@ -37,8 +37,8 @@
 </script>
 
 <script lang="ts">
-  import pathPaypal from "data-base64:~assets/paypal.svg";
   import { Storage } from "@plasmohq/storage";
+  import pathPaypal from "data-base64:~assets/paypal.svg";
 
   const storageLocal = new Storage({ area: "local" });
 
