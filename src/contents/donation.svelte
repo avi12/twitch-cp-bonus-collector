@@ -1,7 +1,6 @@
 <script context="module" lang="ts">
   import cssTextGlobal from "data-text:~assets/global.scss";
-  import cssText from "data-text:~cs-helpers/donation.scss";
-  import type { PlasmoCSConfig, PlasmoGetInlineAnchor, PlasmoGetStyle, PlasmoMountShadowHost } from "plasmo";
+  import type { PlasmoCSConfig, PlasmoGetInlineAnchor, PlasmoMountShadowHost } from "plasmo";
 
   export const config: PlasmoCSConfig = {
     matches: ["https://www.twitch.tv/*"]
@@ -9,12 +8,6 @@
 
   export const getInlineAnchor: PlasmoGetInlineAnchor = () =>
     document.querySelector("[data-target=channel-header-right]");
-
-  export const getStyle: PlasmoGetStyle = () => {
-    const elStyle = document.createElement("style");
-    elStyle.textContent = cssText;
-    return elStyle;
-  };
 
   export const mountShadowHost: PlasmoMountShadowHost = ({ shadowHost, mountState, anchor }) => {
     shadowHost.className = "twitch-bonus-collector-donation-container";
@@ -70,3 +63,39 @@
       }}>⨉</button>
   </a>
 {/if}
+
+<style lang="scss">
+  .twitch-bonus-collector-donation {
+    color: var(--color-text-button-primary, #efeff1);
+    background-color: #006fdf;
+    padding: 0.5rem var(--button-padding-x) 0.5rem calc(var(--button-padding-x) - 0.2rem);
+    border-radius: var(--border-radius-medium, 0.4rem);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    font-size: var(--button-text-default);
+    font-weight: var(--font-weight-semibold);
+
+    &:hover {
+      background-color: #005dbc;
+    }
+
+    img {
+      --size: 16px;
+      width: var(--size);
+      height: var(--size);
+    }
+
+    button {
+      border: none;
+      padding: 0;
+      background: none;
+      color: var(--color-text-button-primary, #efeff1);
+      cursor: pointer;
+      font-size: var(--button-text-default);
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+</style>
