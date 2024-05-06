@@ -2,6 +2,12 @@
   import cssTextGlobal from "data-text:~assets/global.scss";
   import type { PlasmoCSConfig, PlasmoGetInlineAnchor, PlasmoMountShadowHost } from "plasmo";
 
+  declare global {
+    interface Window {
+      twitchExtHideDonationSection: boolean;
+    }
+  }
+
   export const config: PlasmoCSConfig = {
     matches: ["https://www.twitch.tv/*"]
   };
