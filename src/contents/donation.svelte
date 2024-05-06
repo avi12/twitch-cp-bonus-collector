@@ -37,8 +37,8 @@
 </script>
 
 <script lang="ts">
-  import { Storage } from "@plasmohq/storage";
   import pathPaypal from "data-base64:~assets/paypal.svg";
+  import { Storage } from "@plasmohq/storage";
 
   const storageLocal = new Storage({ area: "local" });
 
@@ -61,12 +61,19 @@
 </script>
 
 {#if !isHideDonationSection}
-  <a class="twitch-bonus-collector-donation" href="https://paypal.me/avi12" target="_blank" on:click={hideDonationSection}>
-    <img alt="PayPal" src={pathPaypal} />Support Twitch Bonus Collector Extension<button
+  <a
+    class="twitch-bonus-collector-donation"
+    href="https://paypal.me/avi12"
+    target="_blank"
+    on:click={hideDonationSection}>
+    <img alt="PayPal" src={pathPaypal} />Support Twitch Extension
+    <button
       on:click={e => {
         e.preventDefault();
         hideDonationSection();
-      }}>⨉</button>
+      }}
+      >⨉
+    </button>
   </a>
 {/if}
 
