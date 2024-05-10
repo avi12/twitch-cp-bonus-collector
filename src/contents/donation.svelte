@@ -23,7 +23,7 @@
     ) {
       return;
     }
-    anchor.element.append(shadowHost);
+    anchor.element.parentElement.prepend(shadowHost);
     mountState.observer.disconnect();
   };
 
@@ -57,6 +57,13 @@
 
   function hideDonationSection() {
     storageLocal.set("isHideDonationSection", true);
+  }
+
+  $: if (isHideDonationSection) {
+    const elContainer = document.querySelector(".twitch-bonus-collector-donation-container");
+    if (elContainer) {
+      elContainer.remove();
+    }
   }
 </script>
 
