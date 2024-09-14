@@ -10,7 +10,6 @@ export default {
   trailingComma: "none",
   bracketSpacing: true,
   bracketSameLine: true,
-  plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-svelte"],
   importOrder: ["^@plasmohq/(.*)$", "^~(.*)$", "^[./]"],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
