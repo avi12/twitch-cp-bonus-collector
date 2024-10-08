@@ -11,7 +11,9 @@ export default defineConfig({
       description: "Auto-clicks the Channel Points bonus button when it appears.",
       homepage_url: url
     };
-    if (manifestVersion === 3) {
+    if (browser === "opera") {
+      manifest.author = process.env.npm_package_author;
+    } else if (manifestVersion === 3) {
       manifest.author = { email };
     }
     if (browser === "firefox") {
