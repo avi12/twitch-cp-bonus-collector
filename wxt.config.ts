@@ -5,6 +5,7 @@ export default defineConfig({
   srcDir: "src",
   manifest({ browser, manifestVersion }) {
     const url = process.env.npm_package_repository;
+    // @ts-expect-error Handling the input correctly
     const [, author, email] = process.env.npm_package_author!.match(/(.+) <(.+)>/);
     let manifest: UserManifest = {
       name: "Twitch Channel Points Bonus Collector",
@@ -12,6 +13,7 @@ export default defineConfig({
       homepage_url: url
     };
     if (browser === "opera") {
+      // @ts-expect-error Two possible values, depending on the browser
       manifest.author = process.env.npm_package_author;
     } else if (manifestVersion === 3) {
       manifest.author = { email };
