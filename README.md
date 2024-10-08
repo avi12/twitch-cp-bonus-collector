@@ -44,11 +44,52 @@ pnpm dev:opera
 
 ### Firefox
 
-Currently [unsupported](https://github.com/wxt-dev/wxt/issues/230#issuecomment-1806881653)
+Currently [unsupported](https://github.com/wxt-dev/wxt/issues/230#issuecomment-1806881653)  
+Instead, after building you can follow [this guide](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox)
 
-## Build & package
+## Build
 
-### Chromium/Chrome
+### Chrome/Edge
+
+```shell
+pnpm build
+```
+
+### Opera
+
+```shell
+pnpm build:opera
+```
+
+### Firefox
+
+```shell
+pnpm build:firefox
+```
+
+## Package
+
+### Chrome/Edge
+
+```shell
+pnpm package
+```
+
+### Opera
+
+```shell
+pnpm package:opera
+```
+
+### Firefox
+
+```shell
+pnpm package:firefox
+```
+
+## Shorthands
+
+### Chrome/Edge
 
 ```shell
 pnpm build:package
