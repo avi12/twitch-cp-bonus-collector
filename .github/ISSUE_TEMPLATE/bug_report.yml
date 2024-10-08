@@ -56,6 +56,13 @@ body:
       description: Go to the extensions page and copy the version number
     validations:
       required: true
+  - type: checkboxes
+    id: reported
+    attributes:
+      label: Make sure the bug wasn't reported before
+      options:
+      - label: I'm the first one to [report](https://github.com/avi12/twitch-cp-bonus-collector/issues?q=is%3Aissue) it
+        required: true
   - type: textarea
     id: additional-context
     attributes:
