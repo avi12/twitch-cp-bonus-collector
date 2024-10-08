@@ -54,6 +54,12 @@ Currently [unsupported](https://github.com/wxt-dev/wxt/issues/230#issuecomment-1
 pnpm build:package
 ```
 
+### Opera
+
+```shell
+pnpm build:package:opera
+```
+
 ### Firefox
 
 ```shell
