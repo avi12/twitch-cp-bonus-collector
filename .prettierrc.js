@@ -10,7 +10,7 @@ export default {
   trailingComma: "none",
   bracketSpacing: true,
   bracketSameLine: true,
-  importOrder: ["^@plasmohq/(.*)$", "^~(.*)$", "^[./]"],
+  importOrder: ["^~(.*)$", "^[./]"],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   arrowParens: "avoid"
