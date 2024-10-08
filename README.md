@@ -5,15 +5,16 @@ good ![Channel Points](https://user-images.githubusercontent.com/6422804/1921491
 Available for:
 
 - [Google Chrome](https://chrome.google.com/webstore/detail/kbbdnbaghpcjpdhbjbccadodjejlkkgg) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kbbdnbaghpcjpdhbjbccadodjejlkkgg?color=white&label=users&style=flat-square)
-- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/twitch-cp-bonus-collector) 109+ ![Mozilla Add-on](https://img.shields.io/amo/users/twitch-cp-bonus-collector?color=white&label=users&style=flat-square)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/twitch-cp-bonus-collector)
+  109+ ![Mozilla Add-on](https://img.shields.io/amo/users/twitch-cp-bonus-collector?color=white&label=users&style=flat-square)
 - [Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/igneodbpmkniacbglbpphcbnimpelkec) ![users count](https://img.shields.io/badge/dynamic/json?label=users&query=activeInstallCount&style=flat-square&color=white&url=https://microsoftedge.microsoft.com/addons/getproductdetailsbycrxid/igneodbpmkniacbglbpphcbnimpelkec)
 - [Opera](https://addons.opera.com/en/extensions/details/twitch-channel-points-bonus-collector)
 
-Made by [avi12](https://avi12.com).
+Made by [Avi](https://avi12.com)
 
 ## Requirements for setting up
 
-Install [Node.js](https://nodejs.org) and [PNPM](https://pnpm.js.org/en/installation).
+Install [Node.js](https://nodejs.org) and [PNPM](https://pnpm.io/installation)
 
 ## Install dependencies
 
@@ -21,60 +22,46 @@ Install [Node.js](https://nodejs.org) and [PNPM](https://pnpm.js.org/en/installa
 pnpm i
 ```
 
-## Start development server
+## Start the dev server & run in a test browser
 
-### Chrome/Chromium
+### Chrome
 
 ```shell
 pnpm dev
 ```
 
-### Firefox
+### Edge
 
 ```shell
-pnpm dev:firefox
+pnpm dev:edge
 ```
 
-## Running
-
-### Chrome/Chromium
+### Opera
 
 ```shell
-pnpm run-chromium
-```
-
-### Edge on Windows 10/11
-
-```shell
-pnpm run-edge:windows
-```
-
-### Opera on Windows 10/11
-
-```shell
-pnpm run-opera:windows
+pnpm dev:opera
 ```
 
 ### Firefox
 
+Currently [unsupported](https://github.com/wxt-dev/wxt/issues/230#issuecomment-1806881653)
+
+## Build & package
+
+### Chromium/Chrome
+
 ```shell
-pnpm run-firefox
+pnpm build:package
 ```
 
-## Build & pack
+### Firefox
 
 ```shell
-pnpm build-pack
-```
-
-### Build & pack for Firefox
-
-```shell
-pnpm build-pack:firefox
+pnpm build:package:firefox
 ```
 
 ## Contribution
 
 Feel free to! Make sure to comply with the
-license, [GPL v3](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/LICENSE).  
-If you want to fork, make sure to credit [avi12](https://avi12.com) and link to this repository.
+license, [GPL v3](https://github.com/avi12/twitch-cp-bonus-collector/blob/main/LICENSE)  
+If you want to fork, make sure to credit [Avi](https://avi12.com) and link to this repository
