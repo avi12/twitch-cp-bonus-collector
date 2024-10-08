@@ -1,4 +1,5 @@
 function collectBonusIfPossible() {
+  const btnBonus = document.querySelector<HTMLButtonElement>("[class*=claimable-bonus]");
   const isLiveStreamPage = Boolean(document.querySelector("video"));
   if (!btnBonus || !isLiveStreamPage) {
     return;
