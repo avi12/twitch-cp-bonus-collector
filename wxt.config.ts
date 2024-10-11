@@ -1,4 +1,4 @@
-import { defineConfig, UserManifest } from "wxt";
+import { defineConfig, type UserManifest } from "wxt";
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
@@ -15,7 +15,7 @@ export default defineConfig({
     if (browser === "opera") {
       // @ts-expect-error Two possible values, depending on the browser
       manifest.author = process.env.npm_package_author;
-    } else if (manifestVersion === 3) {
+    } else if (manifestVersion === 3 && browser !== "firefox") {
       manifest.author = { email };
     }
     if (browser === "firefox") {
