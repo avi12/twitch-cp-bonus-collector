@@ -13,7 +13,7 @@ export default defineConfig({
       homepage_url: url
     };
     if (browser === "opera") {
-      // @ts-expect-error Two possible values, depending on the browser
+      // @ts-expect-error https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author
       manifest.author = process.env.npm_package_author;
     } else if (manifestVersion === 3 && browser !== "firefox") {
       manifest.author = { email };
